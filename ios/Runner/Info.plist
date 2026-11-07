@@ -81,5 +81,11 @@
         <string>This app needs photos access to get QR code from photo library</string>
 		<key>UIStatusBarHidden</key>
 		<false/>
+		<!-- Codefest 2026：允許連 localhost / .local 的 http dev server -->
+		<key>NSAppTransportSecurity</key>
+		<dict>
+			<key>NSAllowsLocalNetworking</key>
+			<true/>
+		</dict>
 	</dict>
 </plist>

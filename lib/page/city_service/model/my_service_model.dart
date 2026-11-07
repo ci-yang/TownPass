@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:town_pass/config/codefest.dart';
 import 'package:town_pass/gen/assets.gen.dart';
 
 // 先於 MyServiceItemId enum 加入新服務；
@@ -29,6 +30,7 @@ enum MyServiceItemId {
   library,
   locationSearch,
   zoo,
+  codefest,
   ;
 }
 
@@ -182,6 +184,13 @@ extension MyServiceIdExt on MyServiceItemId {
           icon: Assets.svg.iconZoo24.svg(),
           category: MyServiceCategory.explore,
           destinationUrl: '',
+        ),
+      MyServiceItemId.codefest => MyServiceItem(
+          title: '台北通通通懂台北',
+          description: '城市通微服務大黑客松 2026',
+          icon: Assets.svg.iconLocationSearch24.svg(),
+          category: MyServiceCategory.explore,
+          destinationUrl: kCodefestServiceUrl,
         ),
     };
   }

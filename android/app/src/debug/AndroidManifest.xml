@@ -4,4 +4,6 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Codefest 2026：debug 版允許 http（連開發機 dev server），release 不受影響 -->
+    <application android:usesCleartextTraffic="true"/>
 </manifest>
