@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:town_pass/config/codefest.dart';
+import 'package:town_pass/util/tp_colors.dart';
 import 'package:town_pass/util/tp_web_view.dart';
 
-/// The service is the root screen; TPInAppWebView installs the native bridge
+/// A dedicated service route; TPInAppWebView installs the native bridge
 /// before onWebViewCreated loads the configured HTTPS application.
 class CodefestView extends StatefulWidget {
   const CodefestView({super.key});
@@ -43,6 +44,20 @@ class _CodefestViewState extends State<CodefestView> {
         if (!didPop) await _controller?.goBack();
       },
       child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: TPColors.white,
+          foregroundColor: TPColors.grayscale950,
+          leadingWidth: 152,
+          leading: TextButton.icon(
+            // Explicit exit intentionally bypasses PopScope's web history gate.
+            onPressed: () => Navigator.of(context).pop(),
+            icon: const Icon(Icons.arrow_back, size: 20),
+            label: const Text('返回台北通'),
+            style: TextButton.styleFrom(foregroundColor: TPColors.primary700),
+          ),
+          title: const Text('友善同行', style: TextStyle(fontSize: 18)),
+        ),
         body: SafeArea(
           child: Stack(
             children: [
