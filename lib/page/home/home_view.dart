@@ -19,16 +19,15 @@ class HomeView extends StatelessWidget {
         showLogo: true,
         title: '首頁',
         leading: IconButton(
-          icon: Semantics(
-            label: '帳戶',
-            child: Assets.svg.iconPerson.svg(),
-          ),
+          icon: Semantics(label: '帳戶', child: Assets.svg.iconPerson.svg()),
           onPressed: () => Get.toNamed(TPRoute.account),
         ),
         backgroundColor: TPColors.white,
       ),
       body: const CustomScrollView(
         slivers: [
+          _SliverGap(20),
+          SliverToBoxAdapter(child: _CodefestEntry()),
           _SliverGap(20),
           SliverToBoxAdapter(child: NewsBannerWidget()),
           _SliverGap(20),
@@ -39,6 +38,31 @@ class HomeView extends StatelessWidget {
           SliverToBoxAdapter(child: SubscriptionWidget()),
           _SliverGap(32),
         ],
+      ),
+    );
+  }
+}
+
+class _CodefestEntry extends StatelessWidget {
+  const _CodefestEntry();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: FilledButton.icon(
+        onPressed: () => Get.toNamed(TPRoute.codefest),
+        style: FilledButton.styleFrom(
+          backgroundColor: TPColors.primary500,
+          foregroundColor: TPColors.grayscale950,
+          minimumSize: const Size.fromHeight(56),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+        icon: const Icon(Icons.directions_walk, size: 24),
+        label: const Text('友善同行', style: TextStyle(fontSize: 18)),
       ),
     );
   }
