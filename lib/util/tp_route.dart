@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:town_pass/page/codefest/codefest_view.dart';
 import 'package:town_pass/page/account/account_view.dart';
 import 'package:town_pass/page/account/account_view_controller.dart';
 import 'package:town_pass/page/activity_detail/activity_detail_view.dart';
@@ -9,7 +10,6 @@ import 'package:town_pass/page/basic_info/basic_info_view.dart';
 import 'package:town_pass/page/basic_info/basic_info_view_controller.dart';
 import 'package:town_pass/page/basic_info_edit/basic_info_edit_view.dart';
 import 'package:town_pass/page/basic_info_edit/basic_info_edit_view_controller.dart';
-import 'package:town_pass/page/city_service/widget/pinned_service_widget_controller.dart';
 import 'package:town_pass/page/city_service_edit/city_service_edit_view.dart';
 import 'package:town_pass/page/city_service_edit/city_service_edit_view_controller.dart';
 import 'package:town_pass/page/feedback/feedback_view.dart';
@@ -17,8 +17,6 @@ import 'package:town_pass/page/feedback/feedback_view_controller.dart';
 import 'package:town_pass/page/invoice_receipt/invoice_receipt_view.dart';
 import 'package:town_pass/page/language/language_view.dart';
 import 'package:town_pass/page/language/language_view_controller.dart';
-import 'package:town_pass/page/main/main_view.dart';
-import 'package:town_pass/page/main/main_view_controller.dart';
 import 'package:town_pass/page/message/message_view.dart';
 import 'package:town_pass/page/message/message_view_controller.dart';
 import 'package:town_pass/page/message_detail/message_detail_view.dart';
@@ -63,12 +61,7 @@ abstract class TPRoute {
   static final List<GetPage> page = [
     GetPage(
       name: main,
-      page: () => const MainView(),
-      binding: BindingsBuilder(() {
-        Get
-          ..put<MainViewController>(MainViewController())
-          ..put<PinnedServiceWidgetController>(PinnedServiceWidgetController());
-      }),
+      page: () => const CodefestView(),
     ),
     GetPage(
       name: account,
