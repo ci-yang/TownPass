@@ -37,3 +37,7 @@ Here are some quick setup guide.
    ``` bash
    flutter run
    ```
+
+## Codefest 2026
+
+Codefest 的服務網址設定、Android 建置腳本及裝置驗收事項，見 [Codefest Android 建置與交接](docs/CODEFEST-BUILD.md)。
