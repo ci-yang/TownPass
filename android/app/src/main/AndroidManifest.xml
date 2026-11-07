@@ -1,10 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- Codefest 2026：release/profile 版也要能載入我們的微服務網頁 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Codefest 2026 開發期：usesCleartextTraffic 允許 http dev server；demo 前若改用 HTTPS 可移除 -->
     <application
         android:label="Town Pass"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
