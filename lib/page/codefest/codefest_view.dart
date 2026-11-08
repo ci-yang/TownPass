@@ -56,7 +56,7 @@ class _CodefestViewState extends State<CodefestView> {
             label: const Text('返回台北通'),
             style: TextButton.styleFrom(foregroundColor: TPColors.primary700),
           ),
-          title: const Text('友善同行', style: TextStyle(fontSize: 18)),
+          title: const Text('台北通通通懂台北', style: TextStyle(fontSize: 18)),
         ),
         body: SafeArea(
           child: Stack(
@@ -108,7 +108,7 @@ class _CodefestViewState extends State<CodefestView> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            const Text('目前無法載入友善同行，請確認網路後重試。'),
+                            const Text('目前無法載入服務，請確認網路後重試。'),
                             const SizedBox(height: 16),
                             FilledButton(
                               onPressed: _openService,

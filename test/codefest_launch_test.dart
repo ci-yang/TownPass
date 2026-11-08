@@ -165,7 +165,7 @@ void main() {
     bool failLoad = false,
   }) async {
     await launchHome(tester);
-    await tester.tap(find.text('友善同行'));
+    await tester.tap(find.text('台北通通通懂台北'));
     await pumpRoute(tester);
     await attachController(
       tester,
@@ -231,7 +231,7 @@ void main() {
           .currentIndex,
       1,
     );
-    expect(find.text('友善同行').hitTestable(), findsOneWidget);
+    expect(find.text('台北通通通懂台北').hitTestable(), findsOneWidget);
   });
 
   testWidgets('home entry waits for the bridge then returns to native home', (

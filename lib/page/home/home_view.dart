@@ -61,8 +61,8 @@ class _CodefestEntry extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        icon: const Icon(Icons.directions_walk, size: 24),
-        label: const Text('友善同行', style: TextStyle(fontSize: 18)),
+        icon: const Icon(Icons.travel_explore, size: 24),
+        label: const Text('台北通通通懂台北', style: TextStyle(fontSize: 18)),
       ),
     );
   }
